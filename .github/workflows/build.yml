@@ -28,7 +28,7 @@ jobs:
       uses: microsoft/setup-msbuild@v1
 
     - name: Restore the application
-      run: msbuild ${{ env.Solution_Name }} /p:RestorePackagesConfig=true /t:Restore /p:Configuration=${{ env.Configuration }};Platform="Any CPU"
+      run: msbuild ${{ env.Solution_Name }} /p:RestorePackagesConfig=true /t:Restore /p:Configuration=${{ env.Configuration }}
       env:
         Configuration: Release
 
