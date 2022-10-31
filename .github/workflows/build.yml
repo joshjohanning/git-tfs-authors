@@ -28,9 +28,7 @@ jobs:
       uses: microsoft/setup-msbuild@v1
 
     - name: Restore the application
-      run: msbuild ${{ env.Solution_Name }} /t:Restore /p:Configuration=${{ env.Configuration }}
-      env:
-        Configuration: Release
+      run: msbuild ${{ env.Project_Path }} /t:Restore
 
     - name: Build
       run: msbuild ${{ env.Project_Path }} /p:Configuration=${{ env.Configuration }}
